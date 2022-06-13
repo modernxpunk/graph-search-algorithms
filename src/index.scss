@@ -1,0 +1,152 @@
+$sizeOfCell: 25px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: monospace;
+
+  @media (max-width: 530px) {
+    font-size: 12px;
+  }
+}
+
+input,
+button {
+  outline: 0;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+select {
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: inherit;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  display: flex;
+  min-height: inherit;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  gap: 10px;
+
+  @media (max-width: 400px) {
+    font-size: .8em;
+  }
+
+  &__title {}
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      background-color: #101010;
+      color: white;
+
+      border: 2px solid #101010;
+      padding: 5px 10px;
+      transition: all .2s;
+
+      &:hover {
+        background-color: white;
+        color: #101010;
+      }
+    }
+  }
+}
+
+.board {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+  &__row {
+    display: flex;
+  }
+
+  &__cell {
+    width: $sizeOfCell;
+    height: $sizeOfCell;
+    background-color: aliceblue;
+    border: 1px solid black;
+
+    @media (max-width: 530px) {
+      $sizeOfCell: 20px;
+      width: $sizeOfCell;
+      height: $sizeOfCell;
+    }
+
+    @media (max-width: 430px) {
+      $sizeOfCell: 13px;
+      width: $sizeOfCell;
+      height: $sizeOfCell;
+    }
+  }
+}
+
+
+.footer {
+  margin-top: auto;
+
+  &__author {
+    text-align: center;
+
+    h1 {
+      padding: 0px 10px;
+    }
+  }
+}
+
+
+.legends {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+
+  .item__legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    @media (max-width: 430px) {
+      flex-direction: column;
+    }
+
+    &-block {
+      width: $sizeOfCell;
+      height: $sizeOfCell;
+      border: 1px solid black;
+      background-color: #101010;
+    }
+
+    &-desc {}
+  }
+}
