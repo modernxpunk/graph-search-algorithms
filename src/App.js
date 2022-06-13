@@ -164,7 +164,7 @@ function App() {
                 <option value="default" disabled>Select algorithm</option>
                 <option value="bfs">Breadth-first search</option>
                 <option value="dfs">Depth-first search</option>
-                <option value="dijkstra">Dijkstra's algorithm</option>
+                {/* <option value="dijkstra">Dijkstra's algorithm</option> */}
               </select>
             </div>
             <div className="item-nav">
